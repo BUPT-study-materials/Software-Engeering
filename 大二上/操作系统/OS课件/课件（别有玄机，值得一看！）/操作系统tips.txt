@@ -1,0 +1,84 @@
+题型：判断，名词解释，大题
+
+ppt6
+进程调度（调度的结果）
+时间片bilibo
+cpu几种任务切换方式，计算时间
+
+ppt9
+分页相关算法（大题）
+
+ppt10
+置换算法（大题）
+
+
+ppt13
+一个文件节点里有若干直接存储空间，若干个一级文件指针，若干个二级文件指针，问该文件节点实际的大小
+（直接间接一级二级存储？）
+
+唔，最后的时间看看名词解释应该提分很快吧我猜
+
+Synchronization(同步) finite（有限的）
+
+A Process is an execution stream in the context of a particular process state.//在某个特定进程状态下的执行流
+
+Multiprogramming——Multiple processes at a time（Cpu scheduling）
+
+Context Switch（上下文切换）——内核会将旧线程状态保存在PCB中，然后装入经调度要执行并已经保存的新进程的状态。
+
+PCB（Process Control Block——每一个进程均有一个PCB，在创建进程时，建立PCB，伴随进程运行的全过程，直到进程撤消而撤消。
+
+Thread——Key difference between processes(进程) and threads(线程) is that multiple threads share parts of their state.
+
+TCB——Thread Control Block What is in a thread control block? Typically just registers. 
+
+Atomic Operation——原子操作。An atomic operation is one that executes without any interference from other operations. In other words, it executes as one unit. 
+
+Semaphore——信号量，和Lock，Condition Variable为同步的三种方式，通过原子操作来解决临界区问题。
+
+Mutual Exclusion——互斥现象，only one thread at a time should be allowed to do something一个资源一次只有一个进程使用
+
+Deadlock——死锁。两个或多个进程无限等待一个事件，而这个事件只能由排队事件之一来产生。
+
+CPU scheduling——Cpu调度。Determining which processes run when there are multiple runnable processes.
+
+Throughput（吞吐量）——number of processes completed per unit time. 单位时间里完成的进程的个数
+
+Waiting Time——Amount of time spent ready to run but not running. 
+
+Response Time（响应时间）——Time between submission of requests and first response to the request. 
+
+Starvation——低优先级进程无穷等待Cpu（可以用aging老化来解决这个问题：每过一段时间递减等待进程优先级的值）
+
+Round-Robin scheduling——轮转法调度，定义一个小的时间片，cpu调度程序循环就绪队列，为每个进程分配不超过一个时间片的cpu（交互系统
+
+Multilevel Queue Scheduling——多级队列调度。将就绪队列分成多个独立队列。
+
+Multilevel Feedback Queue Scheduling——多级反馈队列。进程可以在不同优先级的队列里转换。
+
+Paging——分页。避免外部碎片的方法：按照固定大小的块来把物理内存分配给进程，每一块叫页帧。对应用来讲，这是单一的线性的地址空间。
+
+External fragmentation——外部碎片。外部碎片指的是还没有被分配出去（不属于任何进程），但由于太小了无法分配给申请内存空间的新进程的内存空闲区域。（paging可以有效避免外部碎片）
+Internal fragmentation——内部碎片。内部碎片就是已经被分配出去（能明确指出属于哪个进程）却不能被利用的内存空间；（未利用的页）
+
+Page frames——页帧，按照固定大小的块来分配物理内存。
+
+TLB——转换表缓冲区。保存最近使用的映射。不用页号来索引。如果没有找到则返回页表中查找，并把对应映射的关系加载到TLB中，（替换一个不常用的映射关系）） 
+
+Page fault——被请求的页不在内存中。--〉按需分页
+
+Swap space——交换区。a part of disk dedicated to paging. （Swap in/out）
+
+Working set——工作集。每个进程经常使用的那些页。
+
+FAT（文件分配表）把链接访问的指针抽出做成一个表
+
+“Factors”问题
+Deadlock必要条件：Mutual Exclusion互斥现象，Hold and Wait占有并等待，No preemption无抢占，Circular Wait循环等待
+
+*Memory Management（issues）Protection， Naming， Transparency， Efficiency
+
+Modern Operating System Do：Provides Abstractions，Provides Standard Interface，Mediates Resource Usage，Consumes Resources
+
+Page Fault Os Do？Trap to OS->保存进程状态-〉判断异常（逻辑地址不合法或者合法但是页在磁盘上）-〉在内存中找一个空闲帧备用，将页表载入-〉调度一个磁盘操作，以便将所需要的页调入准备好的帧-〉磁盘读操作完成后，修改进程内部表和页表-〉重启执行
+
