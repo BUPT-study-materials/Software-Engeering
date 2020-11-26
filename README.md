@@ -29,3 +29,5 @@
 ## 学习笔记仓库
 
 [数值分析](https://github.com/ppdog0/notes/tree/main/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90)：数值分析相关代码和笔记
+
+[编译原理和形式语言与自动机](https://github.com/ppdog0/notes/tree/main/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86)：编译原理与形式语言与自动机资料整理
