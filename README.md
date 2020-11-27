@@ -30,4 +30,6 @@
 
 [数值分析](https://github.com/ppdog0/notes/tree/main/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90)：数值分析相关代码和笔记
 
-[编译原理和形式语言与自动机](https://github.com/ppdog0/notes/tree/main/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86)：编译原理与形式语言与自动机资料整理
+[形式语言与自动机](https://github.com/ppdog0/notes/tree/main/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E5%BD%A2%E5%BC%8F%E8%AF%AD%E8%A8%80%E4%B8%8E%E8%87%AA%E5%8A%A8%E6%9C%BA)：形式语言与自动机知识点与考点
+
+[编译原理](https://github.com/ppdog0/notes/tree/main/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86)：编译原理语法分析
